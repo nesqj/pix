@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento via PIX</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pagamento via PIX</h1>
+        <p>Use o QR Code abaixo para efetuar o pagamento</p>
+        <div class="qr-code">
+            <img src="assets/images/qrcode.png" alt="QR Code para pagamento">
+        </div>
+        <div class="info">
+            <p><strong>Chave PIX:</strong> Aleatória</p>
+            <p><strong>Banco:</strong> PicPay</p>
+            <p><strong>Titular:</strong> João Pedro de Sousa</p>
+        </div>
+        <button class="copy-button" onclick="copiarChave()">Copiar Chave PIX</button>
+        <p class="instruction">Após o pagamento, por favor, envie o comprovante via WhatsApp:</p>
+    </div>
+    <script>
+        function copiarChave() {
+            const chave = "973e065f-cfb9-40fb-a7c2-82ee020a4297";
+            navigator.clipboard.writeText(chave).then(() => {
+                alert("Chave Pix copiada para a área de transferência!");
+            })
+        }
+    </script>
+</body>
+</html>
